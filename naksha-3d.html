@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Naksha + 3D Design - UdaanBase</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <img src="images/logo.png" alt="UdaanBase Logo" />
+    <h1>UdaanBase</h1>
+    <p>Strong base, limitless foundation</p>
+  </header>
+
+  <!-- <nav>
+    <a href="index.html">Home</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="vastu-naksha.html">Vastu Naksha</a>
+    <a href="complete-package.html">Complete Package</a>
+    <a href="#contact">Contact</a>
+    <a href="projects.html">Projects</a>
+  </nav> -->
+
+  <nav>
+  <div class="nav-container">
+   <a href="index.html" class="logo">UdaanBase</a>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    <div class="nav-links" id="nav-links">
+      <a href="index.html">Home</a>
+      <a href="vastu-naksha.html">Vastu Naksha</a>
+      <a href="complete-package.html">Complete Package</a>
+      <a href="animated-videos.html">Animated Videos</a>
+      <a href="#contact">Contact</a>
+      <!-- <a href="projects.html">Projects</a> -->
+    </div>
+  </div>
+</nav>
+
+  <section>
+    <h1>Naksha + 3D Design</h1>
+    <p>₹4 per sq ft | Vastu layout with 3D visualization</p>
+    <div class="gallery">
+      <img src="images/8.png" alt="3D Design 1" onclick="openLightbox(this.src)" />
+      <img src="images/9.png" alt="3D Design 2" onclick="openLightbox(this.src)" />
+      <img src="images/10.png" alt="3D Design 1" onclick="openLightbox(this.src)" />
+      <img src="images/11.png" alt="3D Design 2" onclick="openLightbox(this.src)" />
+      <img src="images/12.png" alt="3D Design 1" onclick="openLightbox(this.src)" />
+      <img src="images/14.png" alt="3D Design 1" onclick="openLightbox(this.src)" />
+      <img src="images/15.png" alt="3D Design 2" onclick="openLightbox(this.src)" />
+      <img src="images/16.png" alt="3D Design 1" onclick="openLightbox(this.src)" />
+      <img src="images/17.png" alt="3D Design 2" onclick="openLightbox(this.src)" />
+      <img src="images/18.png" alt="3D Design 1" onclick="openLightbox(this.src)" />
+      <img src="images/19.png" alt="3D Design 2" onclick="openLightbox(this.src)" />
+      <img src="images/20.png" alt="3D Design 2" onclick="openLightbox(this.src)" />
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>We'd love to hear from you! Click below to connect with us on WhatsApp and Email.</p>
+     <!-- WhatsApp button -->
+    <a href="https://wa.me/+917061570522" target="_blank">
+    <button class="button">Message on WhatsApp</button> 
+    </a>
+
+    <!-- Email button -->
+    <a href="mailto:udaanbase@gmail.com" target="_blank">
+    <button class="button">Contact on Email</button>
+    </a>
+  </section>
+
+  <footer>
+    <p>&copy; <span id="year"></span> UdaanBase. All rights reserved.</p>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox">
+    <span onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" src="" />
+  </div>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>
+

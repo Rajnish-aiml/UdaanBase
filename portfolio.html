@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio - UdaanBase</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <img src="images/logo.png" alt="UdaanBase Logo" />
+    <h1>UdaanBase</h1>
+    <p>Strong base, limitless foundation</p>
+  </header>
+
+  <!-- <nav>
+    <a href="index.html">Home</a>
+    <a href="vastu-naksha.html">Vastu Naksha</a>
+    <a href="naksha-3d.html">Naksha + 3D</a>
+    <a href="complete-package.html">Complete Package</a>
+    <a href="#contact">Contact</a>
+    <a href="projects.html">Projects</a>
+  </nav> -->
+
+  <nav>
+  <div class="nav-container">
+   <a href="index.html" class="logo">UdaanBase</a>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    <div class="nav-links" id="nav-links">
+      <a href="index.html">Home</a>
+      <a href="animated-videos.html">Animated Videos</a>
+      <a href="#contact">Contact</a>
+      <!-- <a href="projects.html">Projects</a> -->
+    </div>
+  </div>
+</nav>
+
+    <section>
+      <h1>Portfolio</h1>
+    <div class="gallery">
+      <img src="images/p1.jpg" alt="Vastu Plan 1" onclick="openLightbox(this.src)" />
+      <img src="images/p2.jpg" alt="Vastu Plan 2" onclick="openLightbox(this.src)" />
+      <img src="images/p3.jpg" alt="Vastu Plan 1" onclick="openLightbox(this.src)" />
+    </div>
+  </section>
+
+    <section id="contact">
+    <h2>Contact Us</h2>
+    <p>We'd love to hear from you! Click below to connect with us on WhatsApp and Email.</p>
+     <!-- WhatsApp button -->
+    <a href="https://wa.me/+917061570522" target="_blank">
+    <button class="button">Message on WhatsApp</button> 
+    </a>
+
+    <!-- Email button -->
+    <a href="mailto:udaanbase@gmail.com" target="_blank">
+    <button class="button">Contact on Email</button>
+    </a>
+  </section>
+
+ <footer>
+    <p>&copy; <span id="year"></span> UdaanBase. All rights reserved.</p>
+  </footer>
+
+   <script src="js/scripts.js"></script>
+
+</body>
+</html>

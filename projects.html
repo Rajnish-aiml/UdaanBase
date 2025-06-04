@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Projects - UdaanBase</title>
+  <style>
+    body { font-family: Arial; margin: 0; padding: 0; }
+    header, footer { background: #1e3a8a; color: white; padding: 20px; text-align: center; }
+    main { padding: 40px 20px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+      background: #f9f9f9;
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    .card h3 {
+      margin: 10px 0 5px;
+    }
+    .card p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Completed Projects</h1>
+    <p>A showcase of what we've built</p>
+  </header>
+  <main>
+    <div class="grid">
+      <div class="card">
+        <img src="images/duplex.jpg" alt="Residential Duplex">
+        <h3>Residential Duplex</h3>
+        <p>G+2 floor vastu-compliant layout with 3D elevation</p>
+      </div>
+      <div class="card">
+        <img src="images/villa.png" alt="Villa Design">
+        <h3>Vastu-Based Villa</h3>
+        <p>Luxury villa with optimized vastu and landscape layout</p>
+      </div>
+      <div class="card">
+        <img src="images/school.jpg" alt="School Building">
+        <h3>School Building</h3>
+        <p>Structural layout for a 3-floor school with safety design</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 UdaanBase</p>
+  </footer>
+</body>
+</html>
+

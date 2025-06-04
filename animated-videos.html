@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animated-videos - UdaanBase</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/scripts.js"></script>
+    
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="udaanbase logo">
+        <h1>UdaanBase</h1>
+        <p>Strong base, limitless foundation</p>
+    </header>
+
+    <nav>
+  <div class="nav-container">
+   <a href="index.html" class="logo">UdaanBase</a>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    <div class="nav-links" id="nav-links">
+      <a href="index.html">Home</a>
+      <a href="vastu-naksha.html">vastu-naksha</a>
+      <a href="naksha-3d.html">Naksha + 3D</a>
+      <a href="complete-package.html">Complete Package</a>
+      <a href="#contact">Contact</a>
+      <!-- <a href="projects.html">Projects</a> -->
+    </div>
+  </div>
+</nav>
+
+  <h1>Animated Videos</h1>
+
+  <div class="video-gallery">
+    <!-- Replace these with your actual video files -->
+    <div class="video-thumb" onclick="openLightbox('videos/Screen Recording 2025-03-24 152306.mp4')">
+      <video src="videos/Screen Recording 2025-03-24 152306.mp4" muted></video>
+    </div>
+    <div class="video-thumb" onclick="openLightbox('videos/video2.mp4')">
+      <video src="videos/video2.mp4" muted></video>
+    </div>
+    <div class="video-thumb" onclick="openLightbox('videos/video3.mp4')">
+      <video src="videos/video3.mp4" muted></video>
+    </div>
+    <div class="video-thumb" onclick="openLightbox('videos/video4.mp4')">
+      <video src="videos/video4.mp4" muted></video>
+    </div>
+    <div class="video-thumb" onclick="openLightbox('videos/video5.mp4')">
+      <video src="videos/video5.mp4" muted></video>
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="video-lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <video id="lightbox-video" controls autoplay></video>
+  </div>
+
+
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>We'd love to hear from you! Click below to connect with us on WhatsApp and Email.</p>
+     <!-- WhatsApp button -->
+    <a href="https://wa.me/+917061570522" target="_blank">
+    <button class="button">Message on WhatsApp</button> 
+    </a>
+
+    <!-- Email button -->
+    <a href="mailto:udaanbase@gmail.com" target="_blank">
+    <button class="button">Contact on Email</button>
+    </a>
+  </section>
+
+
+   <footer>
+    <p>&copy; <span id="year"></span> UdaanBase. All rights reserved.</p>
+  </footer>
+
+  <script>
+    
+    // Light box part for videos
+
+function openLightbox(src) {
+      const lightbox = document.getElementById('video-lightbox');
+      const video = document.getElementById('lightbox-video');
+
+      video.src = src;
+      lightbox.style.display = 'flex';
+
+      // Push a fake history state
+      history.pushState({ lightboxOpen: true }, '');
+    }
+
+    function closeLightbox() {
+      const lightbox = document.getElementById('video-lightbox');
+      const video = document.getElementById('lightbox-video');
+
+      video.pause();
+      video.src = '';
+      lightbox.style.display = 'none';
+
+      // Go back in history if needed
+      if (history.state && history.state.lightboxOpen) {
+        history.back();
+      }
+    }
+
+    // Close lightbox when back button is pressed
+    window.addEventListener('popstate', function (event) {
+      const lightbox = document.getElementById('video-lightbox');
+      if (lightbox.style.display === 'flex') {
+        closeLightbox();
+      }
+    });
+
+    // ESC key also closes it
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        closeLightbox();
+      }
+    });
+  </script>
+
+</body>
+</html>

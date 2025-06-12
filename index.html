@@ -6,6 +6,59 @@
   <title>UdaanBase - Architecture & Design</title>
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/scripts.js"></script>
+<style>
+
+    /* Popup Overlay */
+    .popup-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .popup-content {
+      position: relative;
+      background: #fff;
+      padding: 10px;
+      border-radius: 12px;
+      max-width: 90%;
+      max-height: 90%;
+    }
+
+    .popup-content img {
+      max-width: 100%;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 30px;
+      cursor: pointer;
+    }
+
+    .lightbox-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.9);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .lightbox-overlay img {
+      max-width: 90%;
+      max-height: 90%;
+    }
+
+</style>
+
 
 </head>
 <body>
@@ -14,7 +67,6 @@
     <h1>UdaanBase</h1>
     <p>Strong base, limitless foundation</p>
   </header>
-
 
 <nav>
   <div class="nav-container">
@@ -28,7 +80,6 @@
       <a href="#contact">Contact</a>
       <a href="portfolio.html">Portfolio</a>
       <a href="animated-videos.html">Animated Videos</a>
-
     </div>
   </div>
 </nav>
@@ -113,6 +164,47 @@
   <footer>
     <p>&copy; <span id="year"></span> UdaanBase. All rights reserved.</p>
   </footer>
+  
+
+<!-- 🔔 POPUP -->
+<div id="popup" class="popup-overlay">
+  <div class="popup-content">
+    <span class="close-btn" onclick="closePopup()">&times;</span>
+    <img src="images/popup.jpg" alt="Popup" onclick="openLightbox(this)">
+  </div>
+</div>
+
+<!-- 💡 LIGHTBOX -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>
+
+
+<script>
+
+  window.onload = () => {
+    document.getElementById('popup').style.display = 'flex';
+    history.pushState(null, null, location.href);
+  };
+
+  function closePopup() {
+    document.getElementById('popup').style.display = 'none';
+  }
+
+  function openLightbox(img) {
+    document.getElementById('lightbox-img').src = img.src;
+    document.getElementById('lightbox').style.display = 'flex';
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+  }
+
+  window.onpopstate = function () {
+    closePopup();
+  };
+
+</script>
 
 </body>
 </html>
